@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --hot --open"
+  },
   "author": "Chris Malilay",
   "license": "ISC",
   "dependencies": {
@@ -29,5 +31,11 @@
   "volta": {
     "node": "16.8.0",
     "npm": "7.22.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
