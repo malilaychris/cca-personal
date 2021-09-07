@@ -1,5 +1,5 @@
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './client/src/index.js',
@@ -12,8 +12,9 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json']
   },
   plugins: [
-    new htmlWebpackPlugin ({
-      template: './client/public/index.html'
+    new HtmlWebpackPlugin ({
+      template: './client/public/index.html',
+      favicon: './client/public/favicon.ico'
     })
   ],
   module: {
