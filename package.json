@@ -2,9 +2,10 @@
   "name": "college-carball-association",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./client/src/index.js",
   "scripts": {
-    "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --hot --open"
+    "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --hot --open",
+    "server": "nodemon server/server.js"
   },
   "author": "Chris Malilay",
   "license": "ISC",
