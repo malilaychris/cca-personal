@@ -5,7 +5,7 @@ module.exports = {
   entry: './client/src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   },
   resolve: {
     modules: [path.resolve(__dirname, './client/src'), 'node_modules'],

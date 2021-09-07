@@ -6,7 +6,8 @@
   "scripts": {
     "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --hot --open",
     "server": "nodemon server/server.js",
-    "start": "concurrently \"npm run client\" \"npm run server\""
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "build": "webpack --config ./config/webpack.config.js --mode production"
   },
   "author": "Chris Malilay",
   "license": "ISC",
