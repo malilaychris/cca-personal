@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './assets/css/App.css';
+import './assets/styles/App.css';
 
 const App = () => (
   <h1>College Carball Association</h1>

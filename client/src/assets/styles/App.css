@@ -1,3 +1,8 @@
+/*
+  Fonts
+    Uni Sans
+*/
+
 @font-face {
   font-family: 'Uni Sans';
   src:
@@ -123,6 +128,10 @@
   font-weight: 900;
   font-style: italic;
 }
+
+/*
+  Reset / Normalize
+*/
 
 *,
 *::before,
