@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Header } from './components';
+
 import './assets/styles/App.css';
 
 const App = () => (
-  <h1>College Carball Association</h1>
+  <Header />
 );
 
 export default App;
