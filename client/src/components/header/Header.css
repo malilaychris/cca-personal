@@ -1,0 +1,55 @@
+.header {
+  background: #00356D;
+  height: 4.4rem;
+  font-family: 'Uni Sans';
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1592px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  margin-right: 0.5rem;
+}
+
+.logo {
+  height: 2.4rem;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  line-height: 4.4rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list-secondary {
+  justify-content: flex-end;
+}
+
+.nav-fill {
+  margin-left: auto;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 0 2.4rem;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-item-secondary {
+  color: #FF8238;
+}
