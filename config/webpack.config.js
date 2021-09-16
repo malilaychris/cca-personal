@@ -7,6 +7,9 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '../dist')
   },
+  devServer: {
+    historyApiFallback: true
+  },
   resolve: {
     modules: [path.resolve(__dirname, './client/src'), 'node_modules'],
     extensions: ['.js', '.jsx', '.json']
