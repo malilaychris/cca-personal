@@ -3,16 +3,17 @@
   "version": "1.0.1",
   "description": "",
   "main": "./client/src/index.js",
-  "scripts": {
-    "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --hot --open",
-    "server": "nodemon server/server.js",
-    "start": "concurrently \"npm run client\" \"npm run server\"",
-    "build": "webpack --config ./config/webpack.config.js --mode production"
-  },
   "author": "Chris Malilay",
   "license": "ISC",
+  "scripts": {
+    "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --hot",
+    "server": "nodemon server/server.js",
+    "build": "webpack --config ./config/webpack.config.js --mode production",
+    "start": "concurrently \"npm run build\" \"npm run server\""
+  },
   "dependencies": {
     "express": "^4.17.1",
+    "pg": "^8.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.3.0"
