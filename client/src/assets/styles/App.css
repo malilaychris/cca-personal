@@ -148,3 +148,15 @@ body {
   background: #f2f2f2;
   color: #222;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1592px;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-family: 'Uni Sans';
+  font-size: 3.4rem;
+  text-transform: uppercase;
+}

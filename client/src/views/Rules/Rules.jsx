@@ -1,16 +1,14 @@
 import React from 'react';
 
-import './Chapters.css';
-
 import { Header } from '../../components';
 
-const Chapters = () => (
+const Rules = () => (
   <>
     <Header />
     <div className="container">
-      <h1>Chapters</h1>
+      <h1>Rules</h1>
     </div>
   </>
 );
 
-export default Chapters;
+export default Rules;
