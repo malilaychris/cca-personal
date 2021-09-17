@@ -8,11 +8,11 @@
   color: #fff;
 }
 
-.container {
+.header-container {
   display: flex;
   align-items: center;
-  max-width: 1592px;
   margin: 0 auto;
+  max-width: 1592px;
 }
 
 .logo-container {

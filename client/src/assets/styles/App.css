@@ -1,6 +1,5 @@
 /*
-  Fonts
-    Uni Sans
+  Fonts: Uni Sans, Inter
 */
 
 @font-face {
@@ -139,4 +138,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/*
+  Global Styles
+*/
+
+body {
+  background: #f2f2f2;
+  color: #222;
 }

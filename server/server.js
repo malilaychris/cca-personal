@@ -5,16 +5,18 @@ const database = require('./database');
 
 const PORT = 3000;
 
+// middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// serve static files in production
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
 /*
-  Chapters RESTful API
+  Routes
 */
 
-// get all chapters
+//get all chapters
 app.get('/api/chapters', async (req, res) => {
   try {
     const chapters = await database.query(
@@ -60,7 +62,7 @@ app.post('/api/chapters', async (req, res) => {
   }
 });
 
-// delete chapter
+//delete chapter
 app.delete('/api/chapters/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -79,10 +81,12 @@ app.delete('/api/chapters/:id', async (req, res) => {
   }
 });
 
+//catch requests and return production index
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../dist', 'index.html'));
 });
 
+//start server and listen on port
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

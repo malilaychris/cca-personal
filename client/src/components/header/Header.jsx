@@ -7,7 +7,7 @@ import Logo from '../../assets/images/ccalogonav.svg';
 
 const Header = () => (
   <header className="header">
-    <div className="container">
+    <div className="header-container">
       <div className="logo-container">
         <NavLink to="/"><img className="logo" src={Logo} /></NavLink>
       </div>
