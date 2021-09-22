@@ -9,7 +9,7 @@
     "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --hot",
     "server": "nodemon server/server.js",
     "build": "webpack --config ./config/webpack.config.js --mode production",
-    "start": "concurrently \"npm run build\" \"npm run server\""
+    "start": "concurrently \"npm run client\" \"npm run server\""
   },
   "dependencies": {
     "express": "^4.17.1",

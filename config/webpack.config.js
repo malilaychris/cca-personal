@@ -8,7 +8,10 @@ module.exports = {
     path: path.resolve(__dirname, '../dist')
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
   },
   resolve: {
     modules: [path.resolve(__dirname, './client/src'), 'node_modules'],
