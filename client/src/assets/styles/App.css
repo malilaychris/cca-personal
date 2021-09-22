@@ -1,7 +1,6 @@
 /*
-  Fonts: Uni Sans, Inter
+  Fonts: Uni Sans, Interstate, Inter
 */
-
 @font-face {
   font-family: 'Uni Sans';
   src:
@@ -128,6 +127,78 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-extralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../fonts/inter-black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
 /*
   Reset / Normalize
 */
@@ -146,6 +217,7 @@
 
 body {
   background: #f2f2f2;
+  font-family: 'Inter';
   color: #222;
 }
 
@@ -158,5 +230,6 @@ h1 {
   margin-top: 2rem;
   font-family: 'Uni Sans';
   font-size: 3.4rem;
+  font-weight: 900;
   text-transform: uppercase;
 }
