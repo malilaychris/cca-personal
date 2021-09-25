@@ -17,3 +17,14 @@ CREATE TABLE chapters(
   color_alt2 VARCHAR,
   page_name VARCHAR
 );
+
+/*
+  Format:
+    id, school,
+    country, state, city,
+    is_established, established_date, region,
+    abbreviation, abbreviation_alt,
+    color_primary, color_secondary, color_alt, color_alt2,
+    page_name
+    (president, vice_president)
+*/

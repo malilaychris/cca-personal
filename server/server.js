@@ -16,7 +16,7 @@ app.use(express.static(path.resolve(__dirname, '../dist')));
   Routes
 */
 
-//get all chapters
+// get all chapters
 app.get('/api/chapters', async (req, res) => {
   try {
     const chapters = await database.query(
@@ -29,7 +29,7 @@ app.get('/api/chapters', async (req, res) => {
   }
 });
 
-//get chapter by ID
+// get chapter by ID
 app.get('/api/chapters/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -44,7 +44,7 @@ app.get('/api/chapters/:id', async (req, res) => {
   }
 });
 
-//add chapter
+// add chapter
 app.post('/api/chapters', async (req, res) => {
   try {
     const { school, id } = req.body;
@@ -62,7 +62,7 @@ app.post('/api/chapters', async (req, res) => {
   }
 });
 
-//delete chapter
+// delete chapter
 app.delete('/api/chapters/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -81,12 +81,12 @@ app.delete('/api/chapters/:id', async (req, res) => {
   }
 });
 
-//catch requests and return production index
+// catch requests and return production index
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../dist', 'index.html'));
 });
 
-//start server and listen on port
+// start server and listen on port
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

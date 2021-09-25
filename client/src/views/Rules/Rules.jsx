@@ -2,13 +2,15 @@ import React from 'react';
 
 import { Header } from '../../components';
 
-const Rules = () => (
-  <>
-    <Header />
-    <div className="container">
-      <h1>Rules</h1>
-    </div>
-  </>
-);
+const Rules = () => {
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <h1 className="page-title">Rules</h1>
+      </div>
+    </>
+  );
+};
 
 export default Rules;

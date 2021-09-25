@@ -4,13 +4,15 @@ import './Chapters.css';
 
 import { Header } from '../../components';
 
-const Chapters = () => (
-  <>
-    <Header />
-    <div className="container">
-      <h1>Chapters</h1>
-    </div>
-  </>
-);
+const Chapters = () => {
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <h1>Chapters</h1>
+      </div>
+    </>
+  );
+};
 
 export default Chapters;
