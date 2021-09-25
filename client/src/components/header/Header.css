@@ -12,8 +12,14 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  max-width: 1592px;
+  padding: 0 1.4rem;
+  width: 100%;
+  max-width: 1620px;
   height: 100%;
+}
+
+.nav-menu-btn {
+  display: none;
 }
 
 .logo-container {
@@ -53,4 +59,45 @@
 
 .nav-item-secondary {
   /* color: #FF8238; */
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .nav {
+    display: none;
+  }
+
+  .nav-menu-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 0.2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .nav-menu-line {
+    display: block;
+    height: 2px;
+    width: 25px;
+    background: #fff;
+    border-radius: 1rem;
+  }
+
+  .nav-menu-line:nth-child(n) {
+    margin: 3px 0;
+  }
+
+  .logo-container {
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin: 0;
+  }
 }
