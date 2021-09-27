@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './ChapterPage.css';
 
 const ChapterPage = () => {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -33,6 +42,12 @@ const ChapterPage = () => {
           </div>
         </div>
 
+        <div className="chapter-region" style={
+          {
+            transform: `translateY(${ offsetY * 0.4 }px)`
+          }
+        }>West</div>
+
         <div className="container-chapterpage">
 
           <section className="section-chapter-heads">
@@ -60,7 +75,7 @@ const ChapterPage = () => {
                   </div>
                 </div>
                 <div className="player-info-alt">
-                  <div className="player-rank"><img src="https://trackercdn.com/cdn/tracker.gg/rocket-league/ranks/s15rank22.png"></img></div>
+                  <div className="player-rank"><img src="https://trackercdn.com/cdn/tracker.gg/rocket-league/ranks/s15rank22.png" /></div>
                   <div className="player-role">Captain</div>
                 </div>
               </li>
@@ -73,7 +88,7 @@ const ChapterPage = () => {
                   </div>
                 </div>
                 <div className="player-info-alt">
-                  <div className="player-rank"><img src="https://trackercdn.com/cdn/tracker.gg/rocket-league/ranks/s15rank22.png"></img></div>
+                  <div className="player-rank"><img src="https://trackercdn.com/cdn/tracker.gg/rocket-league/ranks/s15rank22.png" /></div>
                   <div className="player-role"></div>
                 </div>
               </li>
@@ -86,7 +101,7 @@ const ChapterPage = () => {
                   </div>
                 </div>
                 <div className="player-info-alt">
-                  <div className="player-rank"><img src="https://trackercdn.com/cdn/tracker.gg/rocket-league/ranks/s15rank22.png"></img></div>
+                  <div className="player-rank"><img src="https://trackercdn.com/cdn/tracker.gg/rocket-league/ranks/s15rank22.png" /></div>
                   <div className="player-role"></div>
                 </div>
               </li>
@@ -123,32 +138,32 @@ const ChapterPage = () => {
             <h3 className="section-title section-title-card">Previous Events</h3>
             <ul className="event-list">
               <li className="event-card">
-                <div className="event-logo"></div>
+                <div className="event-icon"></div>
                 <div className="event-name">CCA Summer Series 2021 - West</div>
                 <div className="event-placement">13th - 16th</div>
               </li>
               <li className="event-card">
-                <div className="event-logo"></div>
+                <div className="event-icon"></div>
                 <div className="event-name">CCA Summer Series 2021 - West Division II</div>
                 <div className="event-placement">4th</div>
               </li>
               <li className="event-card">
-                <div className="event-logo"></div>
+                <div className="event-icon"></div>
                 <div className="event-name">CRL Spring 2019 - South</div>
                 <div className="event-placement">9th - 16th</div>
               </li>
               <li className="event-card">
-                <div className="event-logo"></div>
+                <div className="event-icon"></div>
                 <div className="event-name">CRL Fall 2018 - South</div>
                 <div className="event-placement">9th - 10th</div>
               </li>
               <li className="event-card">
-                <div className="event-logo"></div>
+                <div className="event-icon"></div>
                 <div className="event-name">DreamHack Austin - AVGL Collegiate Series 2018</div>
                 <div className="event-placement">2nd</div>
               </li>
               <li className="event-card">
-                <div className="event-logo"></div>
+                <div className="event-icon"></div>
                 <div className="event-name">CRL Fall 2017 - South</div>
                 <div className="event-placement">7th - 8th</div>
               </li>

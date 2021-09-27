@@ -32,6 +32,26 @@
 }
 
 /*
+  Design
+*/
+
+.chapter-region {
+  position: absolute;
+  font-family: 'Uni Sans';
+  text-transform: uppercase;
+  z-index: -1;
+  user-select: none;
+}
+
+.chapter-region {
+  top: 2.5rem;
+  right: -4rem;
+  font-weight: 900;
+  font-size: 23vw;
+  color: rgba(34, 34, 34, 0.03);
+}
+
+/*
   Common
 */
 
@@ -62,11 +82,13 @@
 .section-roster {
   grid-column: 1;
   grid-row: 1 / span 2;
+  margin-bottom: 3rem;
 }
 
 .section-events {
   grid-column: 2;
   grid-row: 2;
+  margin-bottom: 3rem;
 }
 
 /* @media screen and (max-width: 1000px) {
@@ -150,6 +172,10 @@
   border-bottom: 1px solid #e2e2e2;
 }
 
+.player:last-child {
+  border-bottom: none;
+}
+
 .player-info {
   flex: 1 0 0;
   display: flex;
@@ -228,7 +254,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.6rem;
-  padding: 1.6rem 2rem;
+  padding: 0 2rem;
+  height: 4.6rem;
   background: #fff;
   border-radius: 7px;
   font-family: 'Uni Sans';
@@ -246,6 +273,11 @@
 .event-card:last-child {
   margin-bottom: 0;
 }
+
+/* .event-icon img {
+  margin-right: 0.3rem;
+  width: 1.5rem;
+} */
 
 .event-name {
   text-transform: uppercase;
