@@ -37,18 +37,20 @@
 
 .chapter-region {
   position: absolute;
+  top: 2.5rem;
+  right: 0;
+  bottom: 0;
+  width: 60vw;
   font-family: 'Uni Sans';
+  font-size: 24vw;
+  font-weight: 900;
   text-transform: uppercase;
+  text-align: right;
+  /* color: rgb(235, 235, 235); */
+  opacity: 0.04;
   z-index: -1;
   user-select: none;
-}
-
-.chapter-region {
-  top: 2.5rem;
-  right: -4rem;
-  font-weight: 900;
-  font-size: 23vw;
-  color: rgba(34, 34, 34, 0.03);
+  overflow: hidden;
 }
 
 /*
