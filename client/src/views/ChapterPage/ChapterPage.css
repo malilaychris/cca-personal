@@ -1,0 +1,243 @@
+/*
+  Page Header
+*/
+
+.chapter-header {
+  margin: 2.8rem 0 3.4rem;
+}
+
+.chapter-title {
+  display: flex;
+  align-items: center;
+}
+
+.chapter-title-text {
+  font-size: 3.6rem;
+}
+
+.chapter-colors {
+  margin-right: 2rem;
+}
+
+.chapter-info {
+  margin-left: 6.4rem;
+}
+
+.chapter-location {
+  font-family: 'Uni Sans';
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+/*
+  Common
+*/
+
+.container-chapterpage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr;
+  column-gap: 3rem;
+}
+
+.section-title {
+  font-family: 'Uni Sans';
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.section-title-card {
+  margin-bottom: 1rem;
+}
+
+/* @media screen and (max-width: 1000px) {
+  .chapter-title-text {
+    font-size: 3rem;
+  }
+
+  .container-chapterpage {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+/*
+  Chapter Leadership
+*/
+
+.section-chapter-heads {
+  grid-column-start: 1 / 1;
+  display: flex;
+  margin: 0.5rem 0 3rem;
+}
+
+.chapter-head-card {
+  flex: 0 1 50%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 2rem 2.2rem;
+  background: #fff;
+  border-radius: 7px;
+  min-height: 10.6rem;
+}
+
+.chapter-head-card:last-child {
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.chapter-head-title {
+  margin-bottom: 0.8rem;
+  font-family: 'Uni Sans';
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(34, 34, 34, 0.4);
+}
+
+.chapter-head-displayname {
+  font-family: 'Uni Sans';
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.chapter-head-name {
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+/* @media screen and (max-width: 1350px) {
+  .chapter-head-card {
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .section-chapter-heads {
+    flex-direction: column;
+  }
+}
+
+.event-list {
+  list-style: none;
+} */
+
+/*
+  Roster
+*/
+
+.section-roster {
+  grid-column-start: 2 / 2;
+  grid-row-start: span 2;
+}
+
+.roster-list {
+  list-style: none;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  /* padding: 1.6rem 0; */
+  height: 6rem;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.player-info {
+  flex: 1 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.player-picture {
+  flex: 0 0 3rem;
+  background: rgba(34, 34, 34, 0.1);
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.player-info-text {
+  flex: 1 0 90%;
+  margin-left: 1rem;
+}
+
+.player-displayname {
+  font-family: 'Uni Sans';
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.player-name {
+  font-size: 0.9rem;
+  letter-spacing: -0.05em;
+  color: rgba(34, 34, 34, 0.7);
+}
+
+.player-info-alt {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 25%;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 1.4rem;
+}
+
+.player-rank {
+  position: relative;
+  flex: 0 0 50%;
+  padding-right: 1rem;
+}
+
+.player-rank img {
+  width: 3rem;
+}
+
+.player-role {
+  flex: 0 0 50%;
+  font-family: 'Uni Sans';
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(34, 34, 34, 0.2);
+}
+
+/*
+  Events
+*/
+
+.event-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  padding: 1.6rem 2rem;
+  background: #fff;
+  border-radius: 7px;
+  font-family: 'Uni Sans';
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #666;
+}
+
+.event-name {
+  text-transform: uppercase;
+}
+
+.event-placement {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+/* @media screen and (max-width: 768px) {
+  .event-card {
+    padding: 0rem 1.4rem;
+    height: 5.2rem;
+    font-size: 0.85rem;
+  }
+
+  .event-name {
+    max-width: 70%;
+    line-height: 1.25rem;
+  }
+} */
