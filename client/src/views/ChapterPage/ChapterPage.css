@@ -37,7 +37,7 @@
 
 .container-chapterpage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   grid-template-rows: min-content 1fr;
   column-gap: 3rem;
 }
@@ -50,6 +50,23 @@
 
 .section-title-card {
   margin-bottom: 1rem;
+}
+
+.section-chapter-heads {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  margin: 0.5rem 0 3rem;
+}
+
+.section-roster {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.section-events {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 /* @media screen and (max-width: 1000px) {
@@ -66,12 +83,6 @@
 /*
   Chapter Leadership
 */
-
-.section-chapter-heads {
-  grid-column-start: 1 / 1;
-  display: flex;
-  margin: 0.5rem 0 3rem;
-}
 
 .chapter-head-card {
   flex: 0 1 50%;
@@ -127,11 +138,6 @@
   Roster
 */
 
-.section-roster {
-  grid-column-start: 2 / 2;
-  grid-row-start: span 2;
-}
-
 .roster-list {
   list-style: none;
 }
@@ -140,7 +146,7 @@
   display: flex;
   align-items: center;
   /* padding: 1.6rem 0; */
-  height: 6rem;
+  height: 6.4rem;
   border-bottom: 1px solid #e2e2e2;
 }
 
@@ -184,9 +190,9 @@
 }
 
 .player-rank {
-  position: relative;
   flex: 0 0 50%;
-  padding-right: 1rem;
+  padding-right: 1.4rem;
+  text-align: center;
 }
 
 .player-rank img {
@@ -195,12 +201,23 @@
 
 .player-role {
   flex: 0 0 50%;
+  width: 3rem;
   font-family: 'Uni Sans';
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   color: rgba(34, 34, 34, 0.2);
+}
+
+.player-sub .player-info {
+  opacity: 0.5;
+  transition: opacity 150ms ease-out;
+}
+
+.player-sub:hover .player-info,
+.player-sub:active .player-info {
+  opacity: 1;
 }
 
 /*
@@ -218,6 +235,16 @@
   font-size: 0.95rem;
   font-weight: 700;
   color: #666;
+  transition: color 150ms ease-out;
+}
+
+.event-card:hover,
+.event-card:active {
+  color: #222;
+}
+
+.event-card:last-child {
+  margin-bottom: 0;
 }
 
 .event-name {

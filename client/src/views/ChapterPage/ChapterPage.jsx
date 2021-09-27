@@ -17,10 +17,10 @@ const ChapterPage = () => {
                   </clipPath>
                 </defs>
                 <g id="ChapterColors" data-name="ChapterColors" transform="translate(-160 -134)">
-                  <g id="Mask1" data-name="Mask1" transform="translate(160 134)" clip-path="url(#clip-path)">
+                  <g id="Mask1" data-name="Mask1" transform="translate(160 134)" clipPath="url(#clip-path)">
                     <path id="Color1" data-name="Color1" d="M0,0H68.3L0,68.3Z" fill="#bf5700"/>
                   </g>
-                  <g id="Mask2" data-name="2" transform="translate(160 134)" clip-path="url(#clip-path)">
+                  <g id="Mask2" data-name="2" transform="translate(160 134)" clipPath="url(#clip-path)">
                     <path id="Color2" data-name="Color2" d="M68.3,0V68.3H0Z" fill="#fff"/>
                   </g>
                 </g>
@@ -90,7 +90,7 @@ const ChapterPage = () => {
                   <div className="player-role"></div>
                 </div>
               </li>
-              <li className="player">
+              <li className="player player-sub">
                 <div className="player-info">
                   <div className="player-picture"></div>
                   <div className="player-info-text">
@@ -103,7 +103,7 @@ const ChapterPage = () => {
                   <div className="player-role">Sub</div>
                 </div>
               </li>
-              <li className="player">
+              <li className="player player-sub">
                 <div className="player-info">
                   <div className="player-picture"></div>
                   <div className="player-info-text">
@@ -119,7 +119,7 @@ const ChapterPage = () => {
             </ul>
           </section>
 
-          <section className="section-event">
+          <section className="section-events">
             <h3 className="section-title section-title-card">Previous Events</h3>
             <ul className="event-list">
               <li className="event-card">
@@ -139,7 +139,7 @@ const ChapterPage = () => {
               </li>
               <li className="event-card">
                 <div className="event-logo"></div>
-                <div className="event-name">CCA Fall 2018 - South</div>
+                <div className="event-name">CRL Fall 2018 - South</div>
                 <div className="event-placement">9th - 10th</div>
               </li>
               <li className="event-card">
