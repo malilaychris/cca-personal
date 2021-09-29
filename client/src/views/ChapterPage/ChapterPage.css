@@ -37,7 +37,7 @@
 
 .chapter-region {
   position: absolute;
-  top: 2.5rem;
+  top: 4vh;
   right: 0;
   bottom: 0;
   width: 60vw;
@@ -59,8 +59,8 @@
 
 .container-chapterpage {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr minmax(380px, 1.1fr);
+  grid-template-rows: min-content min-content 1fr;
   column-gap: 3rem;
 }
 
@@ -78,49 +78,32 @@
   grid-column: 2;
   grid-row: 1;
   display: flex;
-  margin: 0.5rem 0 3rem;
+  gap: 1rem;
+  margin: 0.5rem 0 4rem;
 }
 
 .section-roster {
   grid-column: 1;
   grid-row: 1 / span 2;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .section-events {
   grid-column: 2;
   grid-row: 2;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
-/* @media screen and (max-width: 1000px) {
-  .chapter-title-text {
-    font-size: 3rem;
-  }
-
-  .container-chapterpage {
-    display: flex;
-    flex-direction: column;
-  }
-} */
-
 /*
-  Chapter Leadership
+  Chapter Leaders
 */
 
 .chapter-head-card {
   flex: 0 1 50%;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   padding: 2rem 2.2rem;
   background: #fff;
   border-radius: 7px;
   min-height: 10.6rem;
-}
-
-.chapter-head-card:last-child {
-  margin-right: 0;
-  margin-bottom: 1rem;
 }
 
 .chapter-head-title {
@@ -142,21 +125,9 @@
 .chapter-head-name {
   font-weight: 400;
   letter-spacing: -0.05em;
+  color:rgba(34, 34, 34, 0.85);
 }
 
-/* @media screen and (max-width: 1350px) {
-  .chapter-head-card {
-    margin-right: 0;
-    max-width: 100%;
-  }
-  .section-chapter-heads {
-    flex-direction: column;
-  }
-}
-
-.event-list {
-  list-style: none;
-} */
 
 /*
   Roster
@@ -192,7 +163,7 @@
 }
 
 .player-info-text {
-  flex: 1 0 90%;
+  flex: 1 0 75%;
   margin-left: 1rem;
 }
 
@@ -213,8 +184,7 @@
   justify-content: flex-end;
   flex: 0 0 25%;
   align-items: center;
-  margin-left: auto;
-  padding-right: 1.4rem;
+  margin-right: 1rem;
 }
 
 .player-rank {
@@ -228,8 +198,7 @@
 }
 
 .player-role {
-  flex: 0 0 50%;
-  width: 3rem;
+  flex: 1 0 3.6rem;
   font-family: 'Uni Sans';
   font-size: 0.7rem;
   font-weight: 700;
@@ -238,13 +207,16 @@
   color: rgba(34, 34, 34, 0.2);
 }
 
-.player-sub .player-info {
-  opacity: 0.5;
+.player-sub .player-info,
+.player-sub .player-rank {
+  opacity: 0.4;
   transition: opacity 150ms ease-out;
 }
 
 .player-sub:hover .player-info,
-.player-sub:active .player-info {
+.player-sub:hover .player-rank,
+.player-sub:active .player-info,
+.player-sub:active .player-rank {
   opacity: 1;
 }
 
@@ -252,10 +224,16 @@
   Events
 */
 
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+}
+
 .event-card {
   display: flex;
   align-items: center;
-  margin-bottom: 0.6rem;
   padding: 0 2rem;
   height: 4.6rem;
   background: #fff;
@@ -272,33 +250,109 @@
   color: #222;
 }
 
-.event-card:last-child {
-  margin-bottom: 0;
-}
-
 /* .event-icon img {
   margin-right: 0.3rem;
   width: 1.5rem;
 } */
 
 .event-name {
+  flex: 1 0;
   text-transform: uppercase;
+  line-height: 1.2rem;
 }
 
 .event-placement {
-  margin-left: auto;
-  font-weight: 700;
+  flex: 0 0 5.5rem;
+  text-align: right;
 }
 
-/* @media screen and (max-width: 768px) {
-  .event-card {
-    padding: 0rem 1.4rem;
-    height: 5.2rem;
-    font-size: 0.85rem;
+/*
+  Mobile / Responsive
+*/
+
+@media screen and (max-width: 1380px) {
+  .section-chapter-heads {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .chapter-title-text {
+    font-size: 3rem;
   }
 
-  .event-name {
-    max-width: 70%;
-    line-height: 1.25rem;
+  .chapter-location {
+    font-size: 1.1rem;
   }
-} */
+
+  .container-chapterpage {
+    grid-template-columns: 1fr minmax(370px, 0.8fr);
+  }
+
+  .section-events {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .container-chapterpage {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .event-card {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+    height: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .chapter-head-card {
+    padding: 1.6rem 1.4rem;
+    min-height: 8.6rem;
+  }
+
+  .chapter-head-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .chapter-head-displayname {
+    font-size: 2rem;
+  }
+
+  .chapter-head-name {
+    font-size: 0.95rem;
+  }
+
+  .player-info-alt {
+    margin-right: 0;
+  }
+
+  .player-rank {
+    padding-right: 0.8rem;
+  }
+
+  .player-rank img {
+    width: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .player-picture {
+    flex-basis: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .player-info-text {
+    margin-left: 0.8rem;
+  }
+
+  .player-displayname {
+    font-size: 1.3rem;
+  }
+}
