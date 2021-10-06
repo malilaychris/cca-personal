@@ -213,6 +213,10 @@
   box-sizing: border-box;
 }
 
+html {
+  line-height: 1.15;
+}
+
 /*
   Global Styles
 */
@@ -220,7 +224,7 @@
 body {
   background: #f2f2f2;
   font-family: 'Inter';
-  color: #293036;
+  color: #222;
 }
 
 .container {
