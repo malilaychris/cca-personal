@@ -30,12 +30,27 @@ app.get('/api/chapters', async (req, res) => {
 });
 
 // get chapter by ID
-app.get('/api/chapters/:id', async (req, res) => {
+// app.get('/api/chapters/:id', async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const getChapter = await database.query(
+//       'SELECT * FROM chapters WHERE chapter_id = $1',
+//       [id]
+//     );
+
+//     res.json(getChapter.rows[0]);
+//   } catch(err) {
+//     console.error(err.message);
+//   }
+// });
+
+// get chapter by chapter name
+app.get('/api/chapters/:chapter', async (req, res) => {
   try {
-    const { id } = req.params;
+    const { chapter } = req.params;
     const getChapter = await database.query(
-      'SELECT * FROM chapters WHERE id = $1',
-      [id]
+      'SELECT * FROM chapters WHERE page_name = $1',
+      [chapter]
     );
 
     res.json(getChapter.rows[0]);

@@ -8,7 +8,7 @@ import Logo from '../../assets/images/ccalogonav.svg';
 const Header = () => {
   return (
     <header className="header">
-      <div className="header-container">
+      <div className="container header-container">
         <button className="nav-menu-btn">
           <div className="nav-menu-line" />
           <div className="nav-menu-line" />
