@@ -27,6 +27,10 @@
   text-transform: uppercase;
 }
 
+.chapter-region {
+  display: none;
+}
+
 /*
   Design
 */
@@ -291,10 +295,61 @@
   }
 }
 
+@media screen and (max-width: 880px) {
+  .chapter-colors {
+    margin-right: 1.2rem;
+  }
+
+  .chapter-colors svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .chapter-location {
+    margin-top: 0.4rem;
+  }
+}
+
 @media screen and (max-width: 840px) {
   .container-chapterpage {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .chapter-header {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .chapter-colors {
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .chapter-colors svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .chapter-location {
+    margin-top: 0.8rem;
+  }
+
+  .chapter-region {
+    margin-top: 0.8rem;
+    display: inline-block;
+    font-family: 'Uni Sans';
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #222;
+  }
+
+  .design-chapter-region {
+    display: none;
   }
 }
 
@@ -307,6 +362,15 @@
 }
 
 @media screen and (max-width: 450px) {
+  .chapter-location {
+    font-size: 1rem;
+    line-height: 1.4rem;;
+  }
+
+  .chapter-region {
+    font-size: 1rem;
+  }
+  
   .chapter-head-card {
     padding: 1.6rem 1.4rem;
     min-height: 8.6rem;

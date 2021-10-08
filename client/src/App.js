@@ -13,7 +13,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/chapters/ut-austin" component={ChapterPageUTAustin} />
+        <Route path="/chapters/sample" component={ChapterPageUTAustin} />
         <Route path="/chapters/:chapter" component={ChapterPage} />
         <Route path="/chapters" component={Chapters} />
         <Route path="/news" component={News} />

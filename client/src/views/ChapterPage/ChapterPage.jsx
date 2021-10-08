@@ -74,9 +74,9 @@ const ChapterPage = () => {
             <h1 className={`chapter-title ${chapterTitleLong}`}>{chapterInfo.school}</h1>
             <div className="chapter-info">
               <h2 className="chapter-location">{chapterLocation}</h2>
+              <h2 className="chapter-region">{chapterRegion}</h2>
             </div>
           </div>
-          
         </div>
 
         <div className="page-design">
