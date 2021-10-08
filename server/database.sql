@@ -31,6 +31,7 @@ CREATE TABLE chapter_events (
 CREATE TABLE teams (
   team_id SERIAL,
   chapter_id INT,
+  is_varsity BOOLEAN DEFAULT false,
   name VARCHAR,
   PRIMARY KEY (team_id),
   FOREIGN KEY (chapter_id) REFERENCES chapters(chapter_id)
