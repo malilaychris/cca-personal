@@ -98,7 +98,7 @@
   Mobile
 */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 870px) {
   .header-container {
     align-items: center;
     padding: 0 1rem;

@@ -4,23 +4,19 @@
 
 .chapter-header {
   margin: 2.8rem 0 3.4rem;
+  display: flex;
 }
 
 .chapter-title {
-  display: flex;
-  align-items: center;
+  font-size: 3.6rem;
 }
 
-.chapter-title-text {
-  font-size: 3.6rem;
+.chapter-title-long {
+  font-size: 3.1rem;
 }
 
 .chapter-colors {
   margin-right: 2rem;
-}
-
-.chapter-info {
-  margin-left: 6.4rem;
 }
 
 .chapter-location {
@@ -35,14 +31,14 @@
   Design
 */
 
-.chapter-region {
+.design-chapter-region {
   position: absolute;
-  top: 4vh;
+  top: 2.4rem;
   right: 0;
   bottom: 0;
-  width: 60vw;
+  width: calc(30rem + 36vw);
   font-family: 'Uni Sans';
-  font-size: 24vw;
+  font-size: calc(12rem + 14vw);
   font-weight: 900;
   text-transform: uppercase;
   text-align: right;
@@ -277,7 +273,7 @@
 }
 
 @media screen and (max-width: 1150px) {
-  .chapter-title-text {
+  .chapter-title {
     font-size: 3rem;
   }
 

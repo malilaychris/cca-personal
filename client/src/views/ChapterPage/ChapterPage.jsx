@@ -5,9 +5,11 @@ import '../ChapterPage/ChapterPage.css';
 
 const ChapterPage = () => {
   const [chapterInfo, setChapterInfo] = useState([]);
+  const [offsetY, setOffsetY] = useState(0);
   const { chapter } = useParams();
 
-  const [offsetY, setOffsetY] = useState(0);
+  document.title = `${chapterInfo.school} - College Carball Association`;
+
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   useEffect(() => {
@@ -25,10 +27,17 @@ const ChapterPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  let chapterLocation = '';
+  let chapterTitle = String(chapterInfo.school);
+  let chapterTitleLong;
+  let chapterLocation;
+  let chapterRegion;
+
+  if(chapterTitle.length > 46) {
+    chapterTitleLong = 'chapter-title-long';
+  }
 
   if(chapterInfo.country) {
-    chapterLocation = `${chapterInfo.country}`;
+    chapterLocation = chapterInfo.country;
     if(chapterInfo.state) {
       chapterLocation = `${chapterInfo.state} - ` + chapterLocation;
       if(chapterInfo.city) {
@@ -37,37 +46,42 @@ const ChapterPage = () => {
     }
   }
 
+  if(chapterInfo.region) {
+    chapterRegion = `${chapterInfo.region} Conference`;
+  }
+
   return (
     <>
       <div className="container">
 
         <div className="chapter-header">
-          <div className="chapter-title">
-            <div className="chapter-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
-                <defs>
-                  <clipPath id="clip-path">
-                    <rect id="RectangleMask" data-name="RectangleMask" width="68" height="68" rx="7" fill="#fff"/>
-                  </clipPath>
-                </defs>
-                <g id="ChapterColors" data-name="ChapterColors" transform="translate(-160 -134)">
-                  <g id="Mask1" data-name="Mask1" transform="translate(160 134)" clipPath="url(#clip-path)">
-                    <path id="Color1" data-name="Color1" d="M0,0H68.3L0,68.3Z" fill={`${chapterInfo.color_primary}`}/>
-                  </g>
-                  <g id="Mask2" data-name="2" transform="translate(160 134)" clipPath="url(#clip-path)">
-                    <path id="Color2" data-name="Color2" d="M68.3,0V68.3H0Z" fill={`${chapterInfo.color_secondary}`}/>
-                  </g>
+          <div className="chapter-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
+              <defs>
+                <clipPath id="clipPath">
+                  <rect id="rectangleMask" data-name="rectangleMask" width="68" height="68" rx="7"/>
+                </clipPath>
+              </defs>
+              <g id="chapterColors" data-name="chapterColors">
+                <g id="mask1" data-name="mask1" clipPath="url(#clipPath)">
+                  <path id="color1" data-name="color1" d="M0,0H68.3S55.539,21.357,38.465,38.432,0,68.3,0,68.3Z" transform="" fill={chapterInfo.color_primary}/>
+                  <path id="color2" data-name="color2" d="M68.3,0V68.3H0Z" fill={chapterInfo.color_secondary}/>
                 </g>
-              </svg>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h1 className={`chapter-title ${chapterTitleLong}`}>{chapterInfo.school}</h1>
+            <div className="chapter-info">
+              <h2 className="chapter-location">{chapterLocation}</h2>
             </div>
-            <h1 className="chapter-title-text">{chapterInfo.school}</h1>
           </div>
-          <div className="chapter-info">
-            <h2 className="chapter-location">{chapterLocation}</h2>
-          </div>
+          
         </div>
 
-        <div className="chapter-region" style={{ transform: `translateY(${ offsetY * 0.4 }px)` }}>{chapterInfo.region}</div>
+        <div className="page-design">
+          <div className="design-chapter-region" style={{ transform: `translateY(${ offsetY * 0.4 }px)` }}>{chapterInfo.region}</div>
+        </div>
 
         <div className="container-chapterpage">
 
