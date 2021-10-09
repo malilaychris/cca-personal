@@ -5,6 +5,7 @@ import '../ChapterPage/ChapterPage.css';
 
 const ChapterPage = () => {
   const [chapterInfo, setChapterInfo] = useState([]);
+  const [players, setPlayers] = useState([]);
   const [offsetY, setOffsetY] = useState(0);
   const { chapter } = useParams();
 
@@ -16,13 +17,20 @@ const ChapterPage = () => {
     window.scrollTo(0, 0);
     window.addEventListener('scroll', handleScroll);
 
-    const fetchAPI = async () => {
+    const fetchChapterAPI = async () => {
       let res = await fetch(`http://localhost:3000/api/chapters/${chapter}`);
       res = await res.json();
       setChapterInfo(res);
     }
 
-    fetchAPI();
+    const fetchPlayersAPI = async () => {
+      let res = await fetch(`http://localhost:3000/api/players`);
+      res = await res.json();
+      setPlayers(res);
+    }
+
+    fetchChapterAPI();
+    fetchPlayersAPI();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -31,7 +39,7 @@ const ChapterPage = () => {
     <>
       <div className="container">
 
-        <div className="chapter-header">
+        <div className="chapterpage-header">
           <div className="chapter-colors">
             {(chapterInfo.color_primary && chapterInfo.color_secondary) &&
               <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
@@ -72,12 +80,39 @@ const ChapterPage = () => {
           </div>
         </div>
 
-        <div className="page-design">
+        <div className="chapterpage-design">
           <div className="design-chapter-region" style={{ transform: `translateY(${ offsetY * 0.4 }px)` }}>{chapterInfo.region}</div>
         </div>
 
-        <div className="container-chapterpage">
-
+        <div className="chapterpage-container">
+          {(chapterInfo.president_id || chapterInfo.vice_president_id) &&
+            <section className="section-chapter-heads">
+              {players.map(player => {
+                if(player.player_id == chapterInfo.president_id) {
+                  return (
+                    <div key={player} className="chapter-head-card">
+                      <div className="chapter-head-title">President</div>
+                      <div className="chapter-head-displayname">{player.username}</div>
+                      <div className="chapter-head-name">{player.full_name}</div>
+                    </div>
+                  );
+                }
+              })}
+              {chapterInfo.vice_president_id &&
+                players.map(player => {
+                  if(player.player_id == chapterInfo.vice_president_id) {
+                    return (
+                      <div key={player} className="chapter-head-card">
+                        <div className="chapter-head-title">Vice President</div>
+                        <div className="chapter-head-displayname">{player.username}</div>
+                        <div className="chapter-head-name">{player.full_name}</div>
+                      </div>
+                    );
+                  }
+                })
+              }
+            </section>
+          }
         </div>
 
       </div>

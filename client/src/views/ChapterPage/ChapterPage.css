@@ -2,7 +2,7 @@
   Page Header
 */
 
-.chapter-header {
+.chapterpage-header {
   margin: 2.8rem 0 3.4rem;
   display: flex;
 }
@@ -57,7 +57,7 @@
   Common
 */
 
-.container-chapterpage {
+.chapterpage-container {
   display: grid;
   grid-template-columns: 1fr minmax(380px, 1.1fr);
   grid-template-rows: min-content min-content 1fr;
@@ -285,7 +285,7 @@
     font-size: 1.1rem;
   }
 
-  .container-chapterpage {
+  .chapterpage-container {
     grid-template-columns: 1fr minmax(370px, 0.8fr);
   }
 
@@ -311,14 +311,14 @@
 }
 
 @media screen and (max-width: 840px) {
-  .container-chapterpage {
+  .chapterpage-container {
     display: flex;
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .chapter-header {
+  .chapterpage-header {
     flex-direction: column-reverse;
     text-align: center;
   }
