@@ -1,5 +1,8 @@
 # dependencies
 node_modules/
 
+# environment variables file
+config/.env
+
 # production build directory
 dist/

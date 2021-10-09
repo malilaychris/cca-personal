@@ -1,6 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 3000;
+
 module.exports = {
   entry: './client/src/index.js',
   output: {
@@ -11,7 +16,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': `http://${HOST}:${PORT}`
     }
   },
   resolve: {
